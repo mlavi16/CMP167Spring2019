@@ -29,7 +29,6 @@ public class Maya {
 	    
 	    System.out.println(fullname);
 		
-		
 	}
 
 }
