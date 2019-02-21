@@ -1,3 +1,9 @@
+/*
+*Author: Maya Lavi
+*Date: 2-21-19
+*Description: Tells the user what title their age qualifies as
+*/
+
 package week4;
 
 import java.util.Scanner;
