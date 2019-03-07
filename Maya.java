@@ -1,34 +1,27 @@
-package firstpackage;
-
-/*
- * Author: Maya Lavi
- * Date: 2.19.19 week 4
- * Description: StringOutputStream Demo
- */
+package week6;
 
 import java.util.Scanner;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-
-
 
 public class Maya {
 	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		double n;
+		double i = 1;
+		double sum = 0;
+		double avg;
 		
-		Scanner input = new Scanner(System.in);
-	    StringWriter fullnameSW = new StringWriter();
-	    PrintWriter fullnamePW = new PrintWriter(fullnameSW);
-	    
-	    System.out.println("Please enter: \"firstname lastname\"");
-	    String word1 = input.next();
-	    String word2 = input.next();
-	    
-	    fullnamePW.print(word1 + " , " + word2);
-	    
-	    String fullname = fullnameSW.toString();
-	    
-	    System.out.println(fullname);
+		System.out.println("Enter in a value for \'n\':");
+		n = scnr.nextDouble();
 		
+		while (i <= n) {
+			sum += i;
+			i++;
+			
+		}
+		avg = sum / n;
+		
+		System.out.println(avg);
+
 	}
 
 }
