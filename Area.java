@@ -8,6 +8,32 @@
 import java.util.Scanner;
 
 public class Area {
+	/* 
+	 * getRectArea: int 
+	 * Parameters: int width, int length
+	 * Calculate: rect area
+	 */
+	public static int getRectArea(int width, int length) {
+		return width * length;	
+	}
+	/* 
+	 * getCircleArea: double 
+	 * Parameters: int radius
+	 * Calculate: circle area
+	 */
+	public static double getCircleArea(int radius) {
+		return Math.PI * Math.pow(radius, 2);
+	}
+	/* 
+	 * getTritArea: int 
+	 * Parameters: int base, int height
+	 * Calculate: tri area
+	 */
+	public static int getTriArea(int base, int height) {
+		return base * height / 2;
+	}
+	
+	
 	public static void rectArea() {
 		/*
 		 * rectArea: void
@@ -73,9 +99,24 @@ public class Area {
 	}
 	
 	public static void main(String [] args) {
-		rectArea();
-		circleArea();
-		triArea();
+		Scanner scnr = new Scanner(System.in);
+		System.out.println("Enter width and length for rectangle: ");
+		int width = scnr.nextInt();
+		int length = scnr.nextInt();
+		int rectArea = getRectArea(width, length);
+		System.out.println("Area of rectangle: " + rectArea);
+		
+		System.out.println("Enter radius for circle: ");
+		int radius = scnr.nextInt();
+		double circArea = getCircleArea(radius);
+		System.out.println("Area of circle: " + circArea);
+		
+		System.out.println("Enter base and height of triangle: ");
+		int base = scnr.nextInt();
+		int height = scnr.nextInt();
+		int triArea = getTriArea(base, height);
+		System.out.println("Area of triangle: " + triArea);
+		
 	}
 
 }
